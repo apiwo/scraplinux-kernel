@@ -1,11 +1,11 @@
-# arctic-kernel
+# scraplinux-kernel
 
 Linux 6.12.100 (current kernel.org/Gentoo LTS) with the
 [ZEN](https://github.com/zen-kernel/zen-kernel) patchset merged on top —
 PDS/BMQ alternate scheduler, PCIe ACS override, inlined futex fast paths,
 `ntsync`, `vhba`, assorted scheduler/TCP/cpufreq tuning — plus a small
-Arctic-specific tweak on top of that. Four ready-to-use `.config` flavors.
-Kernel for [Arctic Linux](https://github.com/apiwo/arctic-linux).
+ScrapLinux-specific tweak on top of that. Four ready-to-use `.config` flavors.
+Kernel for [ScrapLinux](https://github.com/apiwo/scraplinux).
 
 Full provenance of every patch, including the parts of the ZEN merge that
 needed hand reconciliation against 83 point releases of upstream drift
@@ -20,7 +20,7 @@ Hardened-config/  + mainline exploit mitigations (no signed-module enforcement)
 Small-config/     Monolithic, no module loader
 RT-config/        CONFIG_PREEMPT_RT, mainline scheduler (not PDS/BMQ)
 patches/zen/      The ZEN delta as a standalone patch, for reference
-patches/arctic/   Arctic's own patch(es) on top
+patches/arctic/   ScrapLinux's own patch(es) on top
 container/        bwrap sandboxed build script
 PATCHES.md        Full provenance + every manual-reconciliation decision
 ```
@@ -65,6 +65,6 @@ flavors can coexist in `/lib/modules` and `/boot` on the same system.
 GPL-2.0-only, same as upstream Linux — see `COPYING`. Linux itself is
 copyright Linus Torvalds and the Linux kernel community; the ZEN
 patchset is copyright the zen-kernel project and its contributors.
-Arctic Linux's own contribution is the patch in `patches/arctic/`, the
+ScrapLinux's own contribution is the patch in `patches/arctic/`, the
 config flavors, and the build tooling around all of it — see
 `PATCHES.md` for exactly where every line came from.
